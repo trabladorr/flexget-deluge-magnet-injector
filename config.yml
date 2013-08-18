@@ -6,24 +6,24 @@ presets:
           username: ******
           password: ******
     exists_series:
-      /media/icybox/raspi/Series
+      /media/storage/Series
     deluge:
-      path: /media/icybox/raspi/incomplete
-      movedone: "/media/icybox/raspi/Series/{{ series_name }}/Season {{ series_season }}/"
+      path: /media/storage/incomplete
+      movedone: "/media/storage/Series/{{ series_name }}/Season {{ series_season }}/"
   tv_dir:
     import_series:
       from:
-        listdir: /media/icybox/raspi/Series
+        listdir: /media/storage/Series
     exists_series:
-      /media/icybox/raspi/Series
+      /media/storage/Series
     deluge:
-      path: /media/icybox/raspi/incomplete
-      movedone: "/media/icybox/raspi/Series/{{ series_name }}/Season {{ series_season }}/"
+      path: /media/storage/incomplete
+      movedone: "/media/storage/Series/{{ series_name }}/Season {{ series_season }}/"
   movies:
     imdb_lookup: yes
     deluge:
-      path: /media/icybox/raspi/incomplete
-      movedone: "/media/icybox/raspi/Movies/{{ movie_name }}"
+      path: /media/storage/incomplete
+      movedone: "/media/storage/Movies/{{ movie_name }}"
 
       
 
@@ -33,3 +33,5 @@ tasks:
     rss: **********
   moviesDL:
     preset: movies
+    rss: http://127.0.0.1/feed.php
+    accept_all: yes
