@@ -8,54 +8,39 @@ presets:
     exists_series:
       /media/storage/Series
     deluge:
-<<<<<<< HEAD:v3/config.yml
-      user: ******
+      user: localclient
       pass: ******
-      path: /media/icybox/raspi/incomplete
-      movedone: "/media/icybox/raspi/Series/{{ series_name }}/Season {{ series_season }}/"
-
-  tv_hack:
-=======
       path: /media/storage/incomplete
       movedone: "/media/storage/Series/{{ series_name }}/Season {{ series_season }}/"
-  tv_dir:
->>>>>>> f5e156ec5836dfd63bcf6d62e0dc167e6056434a:config.yml
+
+  tv_hack:
     import_series:
       from:
         listdir: /media/storage/Series
     exists_series:
       /media/storage/Series
     deluge:
-<<<<<<< HEAD:v3/config.yml
-      user: ******
+      user: localclient
       pass: ******
-      path: /media/icybox/raspi/incomplete
-      movedone: "/media/icybox/raspi/Series/{{ series_name }}/Season {{ series_season }}/"
-
-  movies:
-    imdb_lookup: yes
-    deluge:
-      user: ******
-      pass: ******
-      path: /media/icybox/raspi/incomplete
-      movedone: "/media/icybox/raspi/Movies/{{ movie_name }}"
-=======
       path: /media/storage/incomplete
       movedone: "/media/storage/Series/{{ series_name }}/Season {{ series_season }}/"
+
   movies:
     imdb_lookup: yes
     deluge:
+      user: localclient
+      pass: ******
       path: /media/storage/incomplete
       movedone: "/media/storage/Movies/{{ movie_name }}"
->>>>>>> f5e156ec5836dfd63bcf6d62e0dc167e6056434a:config.yml
 
-      
+
 
 tasks:
   seriesDL:
     preset: tv
-    rss: ******
+    rss: http://showrss.info/rss.php?user_id=******
   moviesDL:
     preset: movies
     rss: http://127.0.0.1/feed.php
     accept_all: yes
+
